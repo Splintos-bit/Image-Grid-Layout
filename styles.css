@@ -1,0 +1,45 @@
+/* Container setup for grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px; /* space between columns */
+    padding: 20px;
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Column wrappers */
+.column {
+    display: flex;
+    flex-direction: column; /* Stack items vertically within the column */
+    gap: 10px; /* space between items in each column */
+    height: 100%; /* Ensure the column takes full height */
+}
+
+/* Adjust heights for specific columns and items */
+.first-column .item-1,
+.third-column .item-1 {
+    height: 66.66%; /* 2/3 height for first img in the first and third columns */
+    object-fit: cover; /* Ensures image covers the container proportionally */
+}
+
+.first-column .item-2,
+.third-column .item-2 {
+    height: 33.33%; /* 1/3 height for second img in the first and third columns */
+    object-fit: cover; /* Ensures image covers the container proportionally */
+}
+
+.second-column .item-1 {
+    height: 33.33%; /* 1/3 height for first img in the second column */
+    object-fit: cover; /* Ensures image covers the container proportionally */
+}
+
+.second-column .item-2 {
+    height: 66.66%; /* 2/3 height for second img in the second column */
+    object-fit: cover; /* Ensures image covers the container proportionally */
+}
+
+/* Style for grid items (images) */
+.grid-item {
+    width: 100%; /* Ensure images take full width of the column */
+    border: 1px solid #ccc; /* Optional border around images */
+}
